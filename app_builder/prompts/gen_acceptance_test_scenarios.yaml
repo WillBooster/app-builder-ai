@@ -1,0 +1,12 @@
+_type: prompt
+input_variables: ["specifications", "format_instructions"]
+template: |-
+  You are a professional software engineer. Create acceptance test scenarios from the specifications below so that they can test the all features comprehensively.
+  The test scenario set consists of multiple test scenarios. Each of the test scenarios should simulate the entire session of a user with a series of actions.
+
+  {format_instructions}
+
+  System Specifications:
+  """
+  {specifications}
+  """

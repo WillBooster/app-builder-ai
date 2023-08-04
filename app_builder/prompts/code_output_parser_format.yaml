@@ -1,0 +1,7 @@
+_type: prompt
+input_variables: []
+template: |-
+  Your output must be only the source code in the following format. Do not output anything else. Always use tabs for indentation.
+  ```
+  [source code]
+  ```

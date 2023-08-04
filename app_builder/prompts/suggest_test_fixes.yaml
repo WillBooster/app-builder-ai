@@ -1,0 +1,34 @@
+_type: prompt
+input_variables:
+  [
+    "error_message",
+    "test_file",
+    "test_code",
+    "public_interface_document",
+    "source_code_dataset",
+    "format_instructions",
+  ]
+template: |-
+  You are a professional programmer who is debugging a system. You have received the following error when running tests. Suggest possible options to fix the error.
+  The option set consists of at least two options. Each option should specify which file to modify.
+  You can modify either the source code file or the test code file. You can modify only one file in each fix.
+  If there are similar problems in the file which would lead to similar errors, fix them as well.
+
+  {format_instructions}
+
+  Error:
+  ```
+  {error_message}
+  ```
+
+  Test code ({test_file}):
+  ```
+  {test_code}
+  ```
+
+  Public Interface Document:
+  ```
+  {public_interface_document}
+  ```
+
+  {source_code_dataset}

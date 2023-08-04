@@ -1,0 +1,15 @@
+_type: prompt
+input_variables: ["specifications", "format_instructions"]
+template: |-
+  You are a professional software engineer building a system using python. Create a document of public interfaces of the all files required for the system.
+  Make the system highly modularized so that each file would have less than 100 lines of code.
+  Provide detailed descriptions of the public interfaces so that other programmers can know how to use the public interfaces.
+  Make sure to include all the features described in the system specifications, including derived classes.
+  Note that constructors are also public interfaces. Include only .py files. Do not include test files.
+
+  {format_instructions}
+
+  System Specifications:
+  """
+  {specifications}
+  """

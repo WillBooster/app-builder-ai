@@ -1,0 +1,48 @@
+_type: prompt
+input_variables:
+  [
+    "plan",
+    "fixed_file",
+    "fixed_code",
+    "test_file",
+    "test_code",
+    "error_message",
+    "public_interface_document",
+    "specifications",
+    "format_instructions",
+  ]
+template: |-
+  You are a professional programmer who is debugging a system. You have received the following error when running tests.
+  Follow the instruction below to fix the error. If there are similar problems which would lead to similar errors, fix them as well.
+
+  {format_instructions}
+
+  Instrcution to fix the error:
+  """
+  {plan}
+  """
+
+  Source code to fix ({fixed_file}):
+  ```
+  {fixed_code}
+  ```
+
+  Test code ({test_file}):
+  ```
+  {test_code}
+  ```
+
+  Error:
+  ```
+  {error_message}
+  ```
+
+  Public Interface Document:
+  ```
+  {public_interface_document}
+  ```
+
+  System Specifications:
+  """
+  {specifications}
+  """

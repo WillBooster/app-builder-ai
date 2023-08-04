@@ -1,0 +1,34 @@
+_type: prompt
+input_variables:
+  [
+    "specifications",
+    "test_scenario",
+    "public_interface_document",
+    "entry_point_source_code",
+    "format_instructions",
+  ]
+template: |-
+  You are a professional programmer. Create an acceptance test of the system by executeing the entry point of the system, based on the acceptance test scenario below.
+  Implement the test using unittest module and simulate a user's input and the output.
+
+  {format_instructions}
+
+  Test Scenario:
+  """
+  {test_scenario}
+  """
+
+  Public Interface Document:
+  ```
+  {public_interface_document}
+  ```
+
+  Entry Point Source code:
+  ```
+  {entry_point_source_code}
+  ```
+
+  System Specifications:
+  """
+  {specifications}
+  """

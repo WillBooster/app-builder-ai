@@ -1,0 +1,18 @@
+_type: prompt
+input_variables:
+  ["public_interface_document", "source_code", "format_instructions", "file"]
+template: |-
+  You are a professional software engineer. Update the public interface document to reflect the source code of {file}.
+  If no updates are needed, then output the document as is.
+
+  {format_instructions}
+
+  Public Interface Document:
+  ```
+  {public_interface_document}
+  ```
+
+  Source Code:
+  ```
+  {source_code}
+  ```

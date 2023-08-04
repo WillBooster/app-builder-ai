@@ -1,0 +1,35 @@
+_type: prompt
+input_variables:
+  [
+    "specifications",
+    "public_interface_document",
+    "test_code",
+    "format_instructions",
+    "file",
+  ]
+template: |-
+  You are a professional programmer doing TDD with python. Create {file} and write the whole contents of the file.
+  {file} should satisfy the following conditions:
+  - The file should pass the test code.
+  - The file should contain interfaces described in the public interface document.
+  - The implementation should satisfy the specifications.
+  If these conditions contradict each other, the specifications take precedence over other conditions.
+  The classes defined in {file} is described in the public interface document.
+  Remember to write the contents of {file} only. You can import other files as needed, so do not write the contents of other files.
+
+  {format_instructions}
+
+  Test code:
+  ```
+  {test_code}
+  ```
+
+  Public Interface Document:
+  ```
+  {public_interface_document}
+  ```
+
+  System Specifications:
+  """
+  {specifications}
+  """

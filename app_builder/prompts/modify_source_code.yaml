@@ -1,0 +1,37 @@
+_type: prompt
+input_variables:
+  [
+    "specifications",
+    "public_interface_document",
+    "format_instructions",
+    "file",
+    "change_request",
+    "source_code",
+  ]
+template: |-
+  You are a professional programmer who is trying to modify a system. Modify {file} based on the change request below.
+  You are going to modify other files later, so you should only modify the code in {file}.
+  You are also going to modify the public interface document later, so it is okay to change the interface of {file}.
+  If no change is needed for {file}, then output an empty code block.
+
+  {format_instructions}
+
+  Change request:
+  """
+  {change_request}
+  """
+
+  Source code to modify ({file}):
+  ```
+  {source_code}
+  ```
+
+  Public Interface Document:
+  ```
+  {public_interface_document}
+  ```
+
+  Original System Specifications:
+  """
+  {specifications}
+  """

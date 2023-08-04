@@ -1,0 +1,42 @@
+_type: prompt
+input_variables:
+  [
+    "specifications",
+    "public_interface_document",
+    "format_instructions",
+    "test_file",
+    "source_file",
+    "change_request",
+    "test_code",
+    "source_code",
+  ]
+template: |-
+  You are a professional programmer who is trying to modify a system. Modify {test_file} based on the changes made to {source_file}.
+  If no change is needed for {test_file}, then output an empty code block.
+
+  {format_instructions}
+
+  Test code to modify ({test_file}):
+  ```
+  {test_code}
+  ```
+
+  Modified source code ({source_file}):
+  ```
+  {source_code}
+  ```
+
+  Change request:
+  """
+  {change_request}
+  """
+
+  Original System Specifications:
+  """
+  {specifications}
+  """
+
+  Public Interface Document:
+  ```
+  {public_interface_document}
+  ```
