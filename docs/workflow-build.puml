@@ -1,0 +1,19 @@
+@startuml
+
+start
+
+:Read specifications;
+:Generate interface document;
+:Generate unit tests;
+:Generate source code;
+:Generate acceptance tests;
+:Test;
+while (Test failed?) is (yes)
+    :Suggest fix;
+    :Fix source code;
+    :Test;
+endwhile (no)
+
+stop
+
+@enduml

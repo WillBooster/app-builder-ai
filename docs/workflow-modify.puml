@@ -1,0 +1,10 @@
+@startuml
+
+start
+
+:Read change request;
+:Modify source code & tests;
+
+stop
+
+@enduml
