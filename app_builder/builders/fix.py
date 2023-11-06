@@ -1,9 +1,9 @@
 import logging
 import os
 
-from langchain import FAISS
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import load_prompt
+from langchain.vectorstores import FAISS
 from parsers.strict_pydantic_output_parser import StrictPydanticOutputParser
 from schema import (
     PublicInterfaceDocument,

@@ -2,11 +2,11 @@ import difflib
 import logging
 import os
 
-from langchain import FAISS
 from langchain.chat_models import ChatOpenAI
 from langchain.document_loaders import DirectoryLoader, TextLoader
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.prompts import load_prompt
+from langchain.vectorstores import FAISS
 from parsers.code_output_parser import CodeOutputParser
 from schema import PublicInterfaceDocument
 from util import (
