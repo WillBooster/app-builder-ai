@@ -9,7 +9,7 @@ packages = [{ include = "app_builder" }]
 
 [tool.poetry.dependencies]
 python = ">=3.8.1,<4.0"
-langchain = { version = "^0.0.274", extras = ["openai"] }
+langchain = { version = "^0.0.330", extras = ["openai"] }
 pydantic = "^2.0.0"
 python-dotenv = "^1"
 faiss-cpu = "^1"
